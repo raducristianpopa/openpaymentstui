@@ -1,0 +1,34 @@
+{
+  "name": "open-payments-tui",
+  "module": "./src/index.ts",
+  "type": "module",
+  "private": true,
+  "trustedDependencies": [
+    ""
+  ],
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "scripts": {
+    "start": "bun run --conditions=browser ./src/index.ts",
+    "build": "bun ./scripts/build.ts",
+    "migration": "bun ./scripts/generate-migration.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "24",
+    "@types/yargs": "^17.0.35",
+    "ts-morph": "^27.0.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@interledger/open-payments": "^7.1.3",
+    "@opentui/core": "^0.1.61",
+    "@opentui/solid": "^0.1.61",
+    "clipboardy": "^5.0.2",
+    "solid-js": "^1.9.10",
+    "yargs": "^18.0.0"
+  }
+}
